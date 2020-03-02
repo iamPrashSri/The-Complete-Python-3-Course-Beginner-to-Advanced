@@ -1,0 +1,37 @@
+QPushButton {
+    border:none;
+    background:transparent;
+    padding:10px;
+    transition:background .5s;
+}
+
+QPushButton:hover {
+    background:rgba(0,0,0,.05);
+}
+
+QTabBar {
+    background:transparent;
+    border:none !important;
+    border-bottom:2px solid #eee;
+}
+
+QTabBar::tab {
+    padding:10px;
+    border:none;
+    background:transparent;
+    padding-left:20px;
+    padding-right:10px;
+}
+
+QTabBar::tab:selected {
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+    background:#fff;
+    padding-left:10px;
+}
+
+QWidget#toolBar {
+    background:#fff;
+    border-bottom:0px solid rgba(0,0,0,.1);
+    border-top:none;
+}
