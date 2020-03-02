@@ -1,0 +1,45 @@
+$def with (page)
+$var css: Static/css/bootstrap.min.css Static/css/bootstrap-material-design.min.css
+$var js: Static/js/jquery-3.4.1.js Static/js/scripty.js Static/js/bootstrap.min.js Static/js/bootstrap-material-design.min.js
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeWizard</title>
+
+    $if self.css:
+        $for style in self.css.split():
+            <link rel="stylesheet" href="$style" />
+</head>
+<body>
+<div id="App">
+    <div class="navbar navbar-info navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand">CodeWizard</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li><a class="waves-effect" href="/">Home Feed<div class="ripple-container"></div></a></li>
+            <li><a href="/discover">Discover<div class="ripple-container"></div></a></li>
+            <li><a href="/profile">Profile<div class="ripple-container"></div></a></li>
+            <li><a href="/settings">Settings<div class="ripple-container"></div></a></li>
+        </ul>
+
+        <div class="pull-right">
+            <a href="/register" class="btn btn-raised btn-default waves-effect">Register</a>&nbsp; &nbsp;
+        </div>
+    </div>
+
+    $:page
+    <br/><br/><br/>
+</div>
+
+$if self.js:
+    $for script in self.js.split():
+        <script src="$script"></script>
+
+<script>
+
+</script>
+</body>
+</html>
